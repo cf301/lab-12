@@ -38,6 +38,8 @@ class Landing extends React.Component {
         <input onChange={this.updateInput}></input>
         <button onClick={this.handleURLBack} >Button</button>
         
+        {/* //TODO: Write input and button for static map */}
+
       </Fragment>
     );
         
