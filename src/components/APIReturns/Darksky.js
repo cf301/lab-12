@@ -11,10 +11,6 @@ class Darksky extends React.Component {
     }
   }//end constructor
 
-  componentDidMount(){
-    this.DarkSkyAPI();
-  }
-
   DarkSkyAPI = () => {
     // this is where we get the data through superagent
     const url = `https://city-explorer-backend.herokuapp.com/weather`;
@@ -35,6 +31,7 @@ class Darksky extends React.Component {
       <Fragment>
         <p>Darksky</p>
         <h1>{this.state.darksky[0].time}</h1>
+        {this.DarkSkyAPI()}
       </Fragment>
     );
         
