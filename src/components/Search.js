@@ -11,16 +11,12 @@ class Search extends React.Component {
 
   handleSearch = e => {
     e.preventDefault();
-    console.log(':', this.state.searchLocation);
     this.props.handleSubmit(this.state.searchLocation);
-
   }
 
   updateLocation = e => {
-    console.log ('e.target.value:',e.target.value);
     this.setState({searchLocation: e.target.value})
   }
-
 
   render() {
     return (

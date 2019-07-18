@@ -1,10 +1,9 @@
 import React, {Component, Fragment} from 'react';
-import './App.css';
+import '../App.css';
 
 import Header from './Header.js';
 import Landing from './Landing.js';
 import Results from './Results.js';
-import Search from './Search.js';
 
 
 class App extends React.Component {
@@ -17,7 +16,6 @@ class App extends React.Component {
   }//end constructor
 
   toggleView = (url) => {
-    console.log ('you hit the toggleview');
     // any time we set state, react checks and re renders
     this.setState({view: 'results', url: url});
   

@@ -23,13 +23,11 @@ class Landing extends React.Component {
   
   handleURLBack = e => {
     e.preventDefault();
-    console.log('new state of input:', this.state.input);
     //can send back things like, e.target or a number that can be used.
     this.props.toggleView(this.state.input);
   }
 
   updateInput = e => {
-    console.log ('e.target.value:',e.target.value);
     this.setState({input: e.target.value})
   }
 

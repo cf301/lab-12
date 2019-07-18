@@ -15,14 +15,13 @@ class Results extends React.Component {
 
   handleSearch = location => {
     this.setState({searchLocation: location});
-    console.log('in results, location is: ', location);
     // this is where we get the data through superagent
 
     const url = `https://city-explorer-backend.herokuapp.com/location?data=${location}`;
 
     superagent.get(url).then(response => {      
       this.setState({ searchLocation: location, results : response.body})
-    })
+    }).catch (console.error)
   }
 
 
