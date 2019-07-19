@@ -29,17 +29,22 @@ class Results extends React.Component {
     if (this.state.searchLocation === ''){
       return (
         <Fragment>
-          <Search handleSubmit={this.handleSearch} />       
+        <section>
+          <Search handleSubmit={this.handleSearch} /> 
+          </section>      
         </Fragment>
       );
     }
     else{
       return (
         <Fragment>
+        <section>
           <Search handleSubmit={this.handleSearch} />
           {this.state.results.formatted_query && (
             <Content alex={this.state.results}/>
+            
           )}
+          </section>
         </Fragment>
       );
     }

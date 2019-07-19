@@ -26,17 +26,21 @@ class App extends React.Component {
           if (this.state.view === 'landing') {
             return (
               <Fragment>
+                <section>
                 <Header />
                 {/* sending a new props object, with a reference to our function */}
                 <Landing toggleView={this.toggleView}/>
+                </section>
               </Fragment>
             );
           }
           else if (this.state.view === 'results'){
             return (
               <Fragment>
+              <section>
                 <Header />
                 <Results url={this.state.url} />
+              </section>
               </Fragment>
             );
           }
