@@ -1,9 +1,10 @@
 import React, {Component, Fragment} from 'react';
-import '../App.css';
+import '../scss/core.scss';
 
 import Header from './Header.js';
 import Landing from './Landing.js';
 import Results from './Results.js';
+
 
 
 class App extends React.Component {

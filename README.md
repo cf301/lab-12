@@ -74,6 +74,18 @@ Estimate of time needed to complete: 3 hrs
 
 Start time: 9
 
-Finish time: _____
+Finish time: 2pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 5 hours
+
+-------------
+
+Number and name of feature: SCSS and deployment of more features
+
+Estimate of time needed to complete: 5 hrs
+
+Start time: 9am
+
+Finish time: 2pm
+
+Actual time needed to complete: 5 hrs

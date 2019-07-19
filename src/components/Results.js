@@ -9,15 +9,15 @@ class Results extends React.Component {
     super(props);
     this.state = {
       searchLocation: '',
-      results: []
+      results: {}
     }
   }//end constructor
 
   handleSearch = location => {
     this.setState({searchLocation: location});
     // this is where we get the data through superagent
-
-    const url = `https://city-explorer-backend.herokuapp.com/location?data=${location}`;
+    //this.props.url is the entered heroku link
+    const url = `${this.props.url}/location?data=${location}`;
 
     superagent.get(url).then(response => {      
       this.setState({ searchLocation: location, results : response.body})
@@ -37,7 +37,9 @@ class Results extends React.Component {
       return (
         <Fragment>
           <Search handleSubmit={this.handleSearch} />
-          <Content alex={this.state.results}/>
+          {this.state.results.formatted_query && (
+            <Content alex={this.state.results}/>
+          )}
         </Fragment>
       );
     }
