@@ -11,27 +11,19 @@ class Darksky extends React.Component {
     }
   }//end constructor
 
-  DarkSkyAPI = () => {
-    // this is where we get the data through superagent
-    const url = `https://city-explorer-backend.herokuapp.com/weather`;
-    console.log('this.props.alex',this.props.alex);
-    superagent.get(url).query({data: this.props.alex}).then(response => {      
-      this.setState({ darksky : response.body})
-      console.log('response.body:', response.body);
-      console.log('darksky:', this.state.darksky);
-    }).catch (console.error);
-
-  }
-
-
-
   render() {
     // map through data here
+
     return (
       <Fragment>
         <p>Darksky</p>
-        <h1>{this.state.darksky[0].time}</h1>
-        {this.DarkSkyAPI()}
+        <ul>
+        <li>
+        {this.props.dark.map(x => {
+          return x;
+        }) }
+        </li>
+        </ul>
       </Fragment>
     );
         

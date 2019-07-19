@@ -21,10 +21,11 @@ class Search extends React.Component {
   render() {
     return (
       <Fragment>
-        
+        <div class="bar">
         <p>Search for a location</p> 
         <input onChange={this.updateLocation}></input>
         <button onClick={this.handleSearch} >Explore!</button>
+        </div>
       </Fragment>
     );
         
